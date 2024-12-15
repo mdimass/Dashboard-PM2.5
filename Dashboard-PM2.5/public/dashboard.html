@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Monitoring Sensor</title>
+    <!-- Unicons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style1.css" />
+
+  </head>
+
+  <body>
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- sidebar -->
+      <div class="sidebar flex-c">
+        <!-- brand -->
+        <!-- <div class="brand flex">
+          <i class="uil uil-temperature-three-quarter"></i>
+          <p>PM2.5 Tunas Batam</p>
+        </div> -->
+        <div class="brand flex">
+          <!-- <img src="./tunas.png" alt="Logo PM2.5 Tunas Batam" class="logo"> -->
+          <!-- <i class="uil uil-temperature-three-quarter"></i> -->
+          <i class="uil uil-analytics"></i>
+          <p>Tunas Batam</p>
+      </div>
+      
+
+
+        <!-- user -->
+        <div class="user flex-c">
+          <img src="./user.jpg" alt="User" />
+          <p class="name">User</p>
+          <a href="#" class="edit-btn">Edit</a>
+        </div>
+
+        <!-- side menu -->
+        <div class="side-menu flex-c flex-sb">
+          <!-- menu item -->
+          <div class="menu-items flex-c">
+            <div class="item flex active">
+              <i class="uil uil-apps"></i>
+              <p>Dashboard</p>
+            </div>
+
+            <div class="item flex">
+              <i class="uil uil-file-landscape"></i>
+              <p>Activity</p>
+            </div>
+
+            <div class="item flex">
+              <i class="uil uil-schedule"></i>
+              <p>Schedule</p>
+            </div>
+
+            <div class="item flex">
+              <i class="uil uil-setting"></i>
+              <p>Settings</p>
+            </div>
+          </div>
+        </div>
+        <!-- change theme -->
+        <div class="theme flex flex-sb">
+          <p class="light">Light</p>
+          <div class="theme-btn flex w-100">
+            <i class="uil uil-sun light-btn"></i>
+            <i class="uil uil-moon dark-btn"></i>
+          </div>
+          <p class="dark">Dark</p>
+        </div>
+      </div>
+      <!-- end sidebar -->
+
+      <!-- main content -->
+      <div class="main-content">
+        <!-- Top Bar -->
+        <div class="topbar flex flex-sb">
+          <h2><b>Statistics</b></h2>
+
+          <div class="bar flex flex-sb">
+            <input type="text" class="search" placeholder="Search" />
+
+            <a href="#" class="btn">Upgrade</a>
+
+            <div class="notification flex">
+              <i class="uil uil-bell"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END TOP BAR -->
+
+        <!-- content data -->
+        <div class="content-data">
+        <!-- traffic -->
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Air Quality PM2.5</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="pm2.5-logo">
+            <i class="uil uil-wind" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>PM2.5</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+        <!-- END TRAFFIC -->
+
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Air Quality PM10</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="pm10-logo">
+            <i class="uil uil-wind" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>PM10</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+        <!-- --------------------------- -->
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Noise</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="noise-logo">
+            <i class="uil uil-volume" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>Noise</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+
+        <!-- ---------------------------------- -->
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Temperature</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="temperature-logo">
+            <i class="uil uil-temperature-half" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>Temperature</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+      
+        <!-- ------------------------------------ -->
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Humidity</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="humidity-logo">
+            <i class="uil uil-raindrops-alt" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>Humidity</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+
+        <!-- ------------------------------- -->
+        <div class="box web-traffic">
+          <div class="flex flex-sb">
+            <h4>Lux</h4>
+          </div>
+          <!-- Ganti div progress dengan ikon suhu -->
+          <div class="humidity-logo">
+            <i class="uil uil-brightness-low" style="font-size: 6.5rem; color: rgb(0, 0, 0);"></i>
+          </div>
+          <div class="traffic-data flex flex-sb">
+            <div class="source flex">
+              <div class="check social"></div>
+              <p>Lux</p>
+            </div>
+            <!-- <p>75%</p> -->
+          </div>
+        </div>
+
+
+      </div>
+        <!-- END TRAFFIC -->
+        </div>
+        <!-- End Content Data -->
+      </div>
+      <!-- END MAIN CONTENT -->
+    </div>
+    <!-- End Dashboard -->
+
+    <!-- JS -->
+    <script src="script.js"></script>
+    <footer>  
+      &copy; 2024 Antares. All rights reserved. 
+    </footer>
+  </body>
+</html>

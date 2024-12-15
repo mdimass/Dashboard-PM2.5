@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PM2.5 | Antares</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+      // Fungsi untuk memuat username yang tersimpan
+      window.onload = function () {
+        const savedUsername = localStorage.getItem('rememberedUsername');
+        if (savedUsername) {
+          document.getElementById('username').value = savedUsername;
+          document.getElementById('rememberMe').checked = true;
+        }
+      };
+
+      // Fungsi untuk validasi login
+      function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const rememberMe = document.getElementById('rememberMe').checked;
+
+        // Validasi username dan password
+        if (username === 'admin' && password === 'telkom123') {
+          // Jika "Remember Me" dicentang, simpan username di localStorage
+          if (rememberMe) {
+            localStorage.setItem('rememberedUsername', username);
+          } else {
+            localStorage.removeItem('rememberedUsername');
+          }
+
+          // Redirect ke dashboard.html
+          window.location.href = 'dashboard.html';
+        } else {
+          // Jika salah, tampilkan pesan kesalahan
+          alert('Username atau password salah!');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form onsubmit="event.preventDefault(); validateLogin();">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="text" id="username" placeholder="Username" required />
+          <i class='bx bxs-user'></i>
+        </div>
+        
+        <div class="input-box">
+          <input type="password" id="password" placeholder="Password" required />
+          <i class='bx bxs-lock-alt' ></i>
+        </div>
+
+        <div class="remember-forgot">
+          <label> 
+            <input type="checkbox" id="rememberMe" /> Remember me 
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

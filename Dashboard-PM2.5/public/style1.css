@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+
+/* Base */
+
+:root {
+  --grey: #5e6873;
+  --grey-1: #4d4c53;
+  --grey-2: #dcdcdc;
+  --text: #feecdf;
+  --primary: #fff37a;
+  --secondary: #363538;
+  --bg: #242529;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: var(--grey-1);
+}
+
+.logo {
+  width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+  height: auto; /* Pertahankan rasio aspek */
+  margin-right: 10px; /* Beri jarak antara logo dan teks */
+}
+
+
+.dashboard {
+  display: flex;
+  max-width: 1580px;
+  min-height: 850px;
+  background: var(--bg);
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.12);
+  overflow-x: hidden;
+  transition: 0.4s linear;
+  color: var(--text);
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+
+.uil {
+  color: var(--text);
+}
+/* End base */
+
+
+/* sidebar */
+.sidebar {
+  width: 16%;
+  border-right: 1px solid var(--grey-2);
+  padding: 40px;
+  font-size: 15px;
+}
+.brand {
+  font-size: 18px;
+  font-weight: 550;
+}
+.brand .uil {
+  color: var(--primary);
+  font-size: 35px !important;
+}
+.user {
+  margin: 30px 0;
+}
+.user img {
+  width: 80%;
+  border-radius: 50%;
+}
+.name {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.edit-btn {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 350;
+  padding: 4px 14px;
+  border: 1px solid var(--text);
+  border-radius: 14px;
+}
+.side-menu {
+  flex: 1;
+}
+.sidebar .uil {
+  font-size: 23px;
+  margin-right: 5px;
+}
+.sidebar .item {
+  width: 120px;
+  margin: 8px 0;
+  padding: 5px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s linear; 
+  justify-content: start;
+
+}
+.sidebar .item:hover,
+.sidebar .item.active {
+  background: var(--secondary);
+}
+.theme {
+  font-size: 14px;
+  color: var(--grey);
+}
+.theme-btn {
+  width: 60px;
+  height: 32px;
+  border-radius: 18px;
+  padding: 10px;
+  border: 1px solid var(--grey);
+  margin: 0 10px;
+}
+.theme-btn .uil {
+  margin: 0 2px;
+  cursor: pointer;
+  color: var(--grey);
+}
+.uil.dark-btn {
+  color: var(--primary);
+}
+.dark {
+  color: var(--text);
+}
+/* End sidebar */
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Top bar */
+.topbar h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+.bar {
+  flex: 0 0 65%;
+}
+.search {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: var(--secondary);
+  color: var(--text);
+  border-radius: 20px;
+}
+.btn {
+  color: var(--bg);
+  text-decoration: none;
+  background: var(--primary);
+  padding: 12px 22px;
+  margin: 0 20px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 12px;
+}
+.notification {
+  padding: 10px 12px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.notification .uil {
+  font-size: 20px;
+}
+
+/* Content Data */
+.content-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+  grid-gap: 120px; /* Jarak antar elemen */
+  text-align: center; /* Teks diratakan ke tengah */
+  margin-top: 80px; /* Jarak di atas elemen lebih besar */
+}
+
+.box {
+  width: 300px;
+  padding: 25px;
+  background: var(--primary);
+  color: var(--secondary);
+  border-radius: 37px;
+}
+.box h4 {
+  font-size: 22px;
+  font-weight: 820;
+}
+.progress {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--bg);
+  border-right-color: var(--grey);
+  margin: 18px auto;
+}
+.traffic-data {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.check {
+  width: 10px;
+  height: 10px;
+  background: var(--bg);
+  border-radius: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.organic {
+  background: var(--grey);
+}
+
+/* change theme */
+.lightMode .uil.dark-btn{
+  color: var(--grey-1);
+  transition: 0.3s ease;
+}
+
+.lightMode .dark{
+  color: var(--grey-1);
+}
+
+.lightMode.light{
+  color: var(--text);
+  transition: 0.3s linear;
+  transition-delay: 0.3s;
+}
+
+.lightMode .uil.light-btn{
+  color: var(--primary);
+  transition: 0.3s linear;
+  transition-delay: 0.3s;
+}
+
+.lightMode{
+  --grey: #252323;
+  --grey-1: #848483;
+  --grey-1: #f2f2f2;
+  --text: #242529;
+  --primary: #f3d426;
+  --secondary: #e9e9e9;
+   --bg:#ffffff; /*background warna */
+}
+
+.lightMode body{
+  background: var(--bg);
+}
+
+.lightMode .content-data{
+  --secondary: #000000;
+}
+
+.lightMode .download,
+.lightMode .dashboard .open{
+  background: var(--primary);
+}
+
+.lightMode .calender p{
+  color: var(--text);
+}
+
+.lightMode .ccr h2 {
+  color: var(--bg);
+}
+
+/* Responsiveness */
+/* Tablet and smaller devices */
+@media (max-width: 1100px) {
+  .dashboard {
+    flex-direction: column; /* Stack the sidebar and main content vertically */
+    min-height: auto; /* Allow height to adjust */
+  }
+  .sidebar {
+    width: 100%; /* Sidebar takes full width */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+  .main-content {
+    padding: 20px; /* Reduce padding */
+  }
+  .content-data {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid layout */
+    grid-gap: 20px; /* Reduce gap between elements */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column; /* Ensure stacking */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+    padding: 10px;
+  }
+  .sidebar .item {
+    width: auto; /* Allow flexibility */
+    margin: 5px; /* Adjust margin */
+  }
+  .topbar h2 {
+    font-size: 18px; /* Smaller font for headers */
+  }
+  .btn {
+    padding: 8px 16px; /* Smaller button size */
+    font-size: 14px; /* Adjust font size */
+  }
+  .content-data {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+  .box {
+    width: auto; /* Full width for smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+  .progress {
+    width: 80px; /* Smaller progress bar */
+    height: 80px;
+    border-width: 8px; /* Adjust border size */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .btn {
+    padding: 6px 12px; /* Further reduce button size */
+    font-size: 12px; /* Adjust font size */
+  }
+  .notification {
+    padding: 8px 10px; /* Smaller notifications */
+  }
+  .search {
+    font-size: 14px; /* Adjust input font size */
+  }
+}
+/* End Main Content */
